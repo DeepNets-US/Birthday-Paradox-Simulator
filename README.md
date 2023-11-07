@@ -48,7 +48,7 @@ Define the number of steps at which you want to update and visualize the probabi
 
 1. Clone this repository.
 2. Open `index.html` in your web browser.
-3. Or simple open the link to app [Click Here]().
+3. Or simple open the link to app [Click Here](https://birthday-paradox-simulator.vercel.app/).
 
 ## Contributing
 
