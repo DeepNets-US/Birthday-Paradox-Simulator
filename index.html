@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Paradox</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <div class="header fixed-top bg-secondary">
+        <h1 class="text-center fw-bolder">Birthday Paradox</h1>
+    </div>
+
+    <!-- Body Section -->
+    <div class="page shadow p-3 mb-5 bg-body-tertiary rounded">
+        <p>
+            The <strong>Birthday Paradox</strong>, also known as the <strong>Birthday Problem</strong>, is a
+            counterintuitive and interesting probability puzzle. It is not a true paradox in the sense of a logical
+            contradiction, but it goes against our intuitive understanding of probability.
+        </p>
+
+        <p>
+            The Birthday Paradox can be explained as follows:
+
+        <ul class="items list-group list-group-flush">
+            <li class="list-group-item fw-medium">
+                1. Imagine you are in a room with a group of people. The paradox centers around the probability of two
+                or
+                more
+                people in the group sharing the same birthday. To most people, it might seem that you would need a large
+                group of people for this to be likely, but the paradox shows that the probability is much higher than
+                expected, even with a relatively small number of individuals.
+
+            </li>
+            <li class="list-group-item fw-medium">
+                2. The paradox arises from the fact that there are many possible pairs of people in the group, and for
+                each
+                pair, there's a small probability that they share the same birthday. However, as the group size
+                increases,
+                the number of pairs grows rapidly, and so does the likelihood of at least one of those pairs having the
+                same
+                birthday.
+            </li>
+            <li class="list-group-item fw-medium">
+                3. To calculate the probability, you can use the complementary approach. Instead of calculating the
+                probability
+                that at least two people share a birthday directly, you calculate the probability that no one shares a
+                birthday, and then subtract that from 1 (the total probability).
+            </li>
+        </ul>
+
+        </p>
+
+        <p>
+            Let's break down the math:
+
+        <ul class="items list-group list-group-flush">
+
+            <li class="list-group-item fw-medium">
+                1. Probability that the first person has any birthday is 1 (100%).
+            </li>
+
+            <li class="list-group-item fw-medium">
+                2. The probability that the second person does not share a birthday with the first person is 364/365
+                (assuming a non-leap year with 365 days).
+            </li>
+
+
+            <li class="list-group-item fw-medium">
+                3. The probability that the third person does not share a birthday with the first two is 363/365.
+            </li>
+
+            <li class="list-group-item fw-medium">
+                4. And so on, for each subsequent person.
+            </li>
+
+        </ul>
+
+        <p>
+            Now, to find the probability that no one in the group shares a birthday, you multiply these probabilities
+            together. If you have <strong>N</strong> people, the probability that none of them share a birthday is:
+
+            <br>
+        <p class="text-center fw-bold">
+            (365/365) * (364/365) * (363/365) * ... * (365 - n + 1)/365
+        </p>
+        <br>
+
+        To find the probability of at least one pair sharing a birthday, you subtract this probability from
+        <strong>1</strong>.
+        </p>
+
+        <p>
+            The paradox comes into play when you realize that with just <strong>23 people</strong> in the room, the
+            probability of <strong>at least one pair sharing a birthday is approximately 50%.</strong> With <strong>50
+                people</strong>, it rises to about <strong>97%.</strong> The probability increases rapidly as you add
+            more people, which is counterintuitive to our expectations.
+        </p>
+
+        <p>
+            This phenomenon demonstrates how our intuition about probability can be misleading, and it has practical
+            applications in fields like cryptography and statistics. It's important to understand the Birthday Paradox
+            when dealing with problems involving probability and large groups of people.
+        </p>
+
+        <!-- Inputs for live graphs -->
+        <div class="inputArea shadow p-3 mb-5 bg-body-tertiary rounded">
+            <div class="input-group">
+
+                <span class="input-group-text bg-success text-white fs-5 rounded">Number of People</span>
+                <input type="number" aria-label="NPeople" id="NPeople" class="form-control">
+
+                <span class="input-group-text bg-success text-white fs-5 rounded">Number of Simulations</span>
+                <input type="number" aria-label="NSims" id="NSims" class="form-control">
+
+                <span class="input-group-text bg-success text-white fs-5 rounded">Information Step</span>
+                <input type="number" aria-label="StepCase" id="StepCase" class="form-control">
+
+                <button class="btn btn-outline-success fs-5 rounded" type="button" id="startSims">Start Sims</button>
+
+            </div>
+
+            <div class="graphs">
+                <h3>Graphs will appear here.</h3>
+            </div>
+        </div>
+    </div>
+    <audio class="enterAudio" src="enter.mp3" style="display: none;"></audio>
+    <script src="script.js"></script>
+</body>
+
+</html>
