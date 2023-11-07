@@ -56,7 +56,7 @@ This project is maintained by **Utkarsh Saxena**. As a solo project, contributio
 
 ## License
 
-This project is licensed under the Private Lice - see the **LICENSE file** for details.
+This project is licensed under the Private Lice - see the **[LICENSE file](LICENSE)** for details.
 
 ## Author
 
