@@ -110,7 +110,7 @@
 }
 
 /* Add a media query for mobile screens (up to 768px) */
-@media (max-width: 425px) {
+@media (max-width: 500px) {
     .page {
         margin: 0 !important;
         margin-top: 70px !important;
