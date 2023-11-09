@@ -51,6 +51,7 @@ const StepCase = document.getElementById("StepCase");
 const startSims = document.getElementById("startSims");
 const graphs = document.querySelector(".graphs");
 const enterAudio = document.querySelector(".enterAudio");
+const graphTitle = document.querySelector(".graph-title");
 
 startSims.addEventListener("click", function (event) {
     if (event.type === "click" || (event.type === "keypress" && event.key === "Enter")) {
@@ -90,12 +91,8 @@ StepCase.addEventListener("keypress", function (event) {
 
 // A function for handling simulation
 function startSimulation(nPeopleValue, nSimsValue, stepCaseValue) {
-    graphs.innerHTML = `
-    <div class="charts">
-        <div id="lineDataChart"></div>
-        <div id="pieChart"></div>
-    <div>
-    `;
+    graphs.style.display = "inline";
+    graphTitle.innerHTML = "Simulation Data";
 
     let totalMatches = 0;
     let stepMatches = 0;
@@ -146,7 +143,7 @@ function renderLineGraph(stepProbas, stepCaseValue) {
             curveType: 'function',
             backgroundColor: 'transparent',
             legend: { position: 'bottom' },
-            width: 600, height: 500,
+            maintainAspectRatio: false,
         };
 
         var chart = new google.visualization.LineChart(document.getElementById('lineDataChart'));
@@ -182,9 +179,9 @@ function renderPieChart(finalProbability) {
             title: "Overall Probability",
             pieHole: 0.4,
             backgroundColor: 'transparent',
-            width: 600, height: 500,
             bar: { groupWidth: "95%" },
             legend: { position: "none" },
+            maintainAspectRatio: false,
         };
 
         var chart = new google.visualization.PieChart(document.getElementById("pieChart"));

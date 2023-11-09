@@ -73,15 +73,16 @@
     margin-right: 10px;
 }
 
+/* Displaying Graphs */
+
 .graphs {
+    display: none;
     margin-top: 10px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
 }
 
 .charts {
-    width: 100%;
+    width: 200px;
+    width: 50px;
     display: flex;
     padding-left: 10px;
     flex-direction: row;
