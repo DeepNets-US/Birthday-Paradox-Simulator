@@ -1,16 +1,55 @@
-.header {
+/* Replicating Bootstrap Section */
+
+.custom-input-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     padding: 10px;
+    width: 100%;
+}
+
+.custom-input-group .form-control {
+    flex: 1;
+    font-size: 1.3rem;
+}
+
+
+.custom-input-group-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.375rem 0.75rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #212529;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    display: flex;
+    width: auto;
+}
+
+.startSim {
+    margin-left: 0.25rem;
+}
+
+/* Header Section */
+.header {
+    padding: 2px;
     border-radius: 0 0 30px 30px;
 }
 
 .header h1 {
-    font-size: 35px;
+    font-size: 30px;
     color: white;
 }
 
 .page {
     margin: 50px;
-    margin-top: 100px;
+    margin-top: 70px;
     padding: 100px;
 }
 
@@ -18,17 +57,53 @@
     padding: 10px;
 }
 
+/* Simulation Section */
+
 .inputArea {
     margin: 10px;
+    margin-top: 20px;
 }
-.input-group input{
+
+
+.inputArea span {
+    color: white;
+}
+
+.input-group input {
     margin-right: 10px;
 }
 
 .graphs {
-    margin: 10px;
-    padding: 50px;
+    margin-top: 10px;
     text-align: center;
     display: flex;
     justify-content: center;
+}
+
+.charts {
+    width: 100%;
+    display: flex;
+    padding-left: 10px;
+    flex-direction: row;
+}
+
+/* Responsive Site Section */
+
+/* Create a media query for tablet screens (768px - 1024px) */
+@media (max-width: 768px) {
+    .custom-input-group {
+        flex-direction: column;
+    }
+
+    .custom-input-group-text,
+    .form-control,
+    .startSim {
+        width: 80%;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .charts {
+        flex-direction: column;
+    }
 }

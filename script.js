@@ -90,8 +90,11 @@ StepCase.addEventListener("keypress", function (event) {
 
 // A function for handling simulation
 function startSimulation(nPeopleValue, nSimsValue, stepCaseValue) {
-    graphs.innerHTML = `<div id="lineDataChart"></div>
-    <div id="pieChart"></div>
+    graphs.innerHTML = `
+    <div class="charts">
+        <div id="lineDataChart"></div>
+        <div id="pieChart"></div>
+    <div>
     `;
 
     let totalMatches = 0;
@@ -141,6 +144,7 @@ function renderLineGraph(stepProbas, stepCaseValue) {
         var options = {
             title: 'Probability Variations',
             curveType: 'function',
+            backgroundColor: 'transparent',
             legend: { position: 'bottom' },
             width: 600, height: 500,
         };
@@ -177,6 +181,7 @@ function renderPieChart(finalProbability) {
         var options = {
             title: "Overall Probability",
             pieHole: 0.4,
+            backgroundColor: 'transparent',
             width: 600, height: 500,
             bar: { groupWidth: "95%" },
             legend: { position: "none" },
