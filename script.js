@@ -65,7 +65,6 @@ startSims.addEventListener("click", function (event) {
             alert("Please enter valid positive values for N people, Simulations, and Step Case.");
         } else {
             startSimulation(nPeopleValue, nSimsValue, stepCaseValue);
-            enterAudio.play();
         }
     }
 });
@@ -120,6 +119,9 @@ function startSimulation(nPeopleValue, nSimsValue, stepCaseValue) {
     // Calculate the final probability based on total matches and simulations, rounding to two decimal places
     let finalProbability = parseFloat((totalMatches / nSimsValue).toFixed(2));
     renderPieChart(finalProbability);
+
+    // Play audio after all the rendering is done
+    enterAudio.play();
 }
 
 
