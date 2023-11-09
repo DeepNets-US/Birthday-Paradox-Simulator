@@ -91,7 +91,7 @@
 /* Responsive Site Section */
 
 /* Create a media query for tablet screens (768px - 1024px) */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .custom-input-group {
         flex-direction: column;
     }
